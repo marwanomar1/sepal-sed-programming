@@ -1,0 +1,16 @@
+{
+  "docker_in_docker": true,
+  "required_resources": "2vcpu+6gib",
+  "problems": [
+    {
+      "id": "sed_programming_full_context",
+      "context_level": "full_context",
+      "entrypoint": "sed_programming_full_context"
+    },
+    {
+      "id": "sed_programming_minimal_context",
+      "context_level": "minimal_context",
+      "entrypoint": "sed_programming_minimal_context"
+    }
+  ]
+}
