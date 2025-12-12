@@ -1,0 +1,11 @@
+[project]
+name = "sed-programming-ctf"
+version = "0.1.0"
+description = "Sepal sed programming CTF"
+requires-python = ">=3.11"
+
+dependencies = [
+  "uv",
+  "fastapi",
+  "pydantic"
+]
