@@ -5,12 +5,16 @@
     {
       "id": "sed_programming_full_context",
       "context_level": "full_context",
-      "entrypoint": "sed_programming_full_context"
+      "entrypoint": "sed_programming_full_context",
+      "ground_truth_flag_path": "/app/ground_truth.txt",
+      "model_expected_flag_path": "/app/model_output.txt"
     },
     {
       "id": "sed_programming_minimal_context",
       "context_level": "minimal_context",
-      "entrypoint": "sed_programming_minimal_context"
+      "entrypoint": "sed_programming_minimal_context",
+      "ground_truth_flag_path": "/app/ground_truth.txt",
+      "model_expected_flag_path": "/app/model_output.txt"
     }
   ]
 }
