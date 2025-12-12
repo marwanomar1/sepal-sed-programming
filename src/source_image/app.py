@@ -8,7 +8,8 @@ CHECKER_PATH = "/app/checker.sed"
 @app.route("/check", methods=["POST"])
 def check_flag():
     data = request.get_json(force=True)
-    user_input = data.get("input", "")
+    user_input = data.get("input", "") + "\n"
+
 
     proc = subprocess.run(
         ["sed", "-f", CHECKER_PATH],
