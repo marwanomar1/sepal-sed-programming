@@ -1,18 +1,24 @@
 {
-  "docker_in_docker": true,
+  "docker_in_docker": false,
   "required_resources": "2vcpu+6gib",
+  "runner": {
+    "binary": "/usr/local/bin/mcp_server",
+    "args_template": ["--problem", "{problem_id}", "--context", "{context_level}"]
+  },
   "problems": [
     {
       "id": "sed_programming_full_context",
       "context_level": "full_context",
-      "entrypoint": "sed_programming_full_context",
+      "entrypoint": "/usr/local/bin/mcp_server",
+      "entrypoint_args": ["--problem", "sed_programming_full_context", "--context", "full_context"],
       "ground_truth_flag_path": "/app/ground_truth.txt",
       "model_expected_flag_path": "/app/model_output.txt"
     },
     {
       "id": "sed_programming_minimal_context",
       "context_level": "minimal_context",
-      "entrypoint": "sed_programming_minimal_context",
+      "entrypoint": "/usr/local/bin/mcp_server",
+      "entrypoint_args": ["--problem", "sed_programming_minimal_context", "--context", "minimal_context"],
       "ground_truth_flag_path": "/app/ground_truth.txt",
       "model_expected_flag_path": "/app/model_output.txt"
     }
